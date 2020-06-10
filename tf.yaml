@@ -1,0 +1,11 @@
+backend:
+  type: gcs
+  gcs:
+    # Use different state bucket per environment
+    bucket: 'gcp-tatusl-tf-state-<%= @env %>'
+    # GCS backend does not allow to write full object key, instead it allows passing wanted prefix.
+    # State file name seems always be "default.state"
+    # Here we use full path of module dir for object key prefix
+    # Cleaner solution would be to use for example regex for getting name of the module from full path
+    # See: https://github.com/Yleisradio/yle_tf#backend for example of regex usage
+    prefix: <%= @module_dir %>
