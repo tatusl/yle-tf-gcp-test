@@ -1,5 +1,5 @@
 # yle-tf-gcp-test
-PoC for handling Terraform remote state with yle_tf in GCP
+PoC for handling Terraform remote state with [yle_tf](https://github.com/Yleisradio/yle_tf) in GCP
 
 See comments in [tf.yaml](https://github.com/tatusl/yle-tf-gcp-test/blob/master/tf.yaml)
 
